@@ -3,16 +3,29 @@
 
 #include "RoveSwitch.h"
 
+#include <cstdint>
+
+
 class LimitSwitch : public RoveSwitch {
 
 private:
 
-	int m_port;
+	uint8_t m_pin;
 	
 public:
 
-	LimitSwitch(int port) : m_port(port) {}
+	/**
+	 * @brief Construct a new LimitSwitch object.
+	 * 
+	 * @param pin The Arduino pin number to use.
+	 */
+	LimitSwitch(const uint8_t& pin) : m_pin(pin) {}
 
+    /**
+     * @brief Read the current value of the switch via Arduino digitalRead().
+     * 
+     * @return Whether the switch is tripped.
+     */
 	bool read();
 	
 };

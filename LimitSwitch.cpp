@@ -6,10 +6,7 @@
 
 
 bool LimitSwitch::read() {
-	bool val = digitalRead(m_port);
-	if (m_inverted) val = !val;
-
-	return val;
+	return digitalRead(m_pin) != m_inverted;
 }
 
 

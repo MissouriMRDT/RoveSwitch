@@ -1,6 +1,6 @@
 #include "RoveSwitch.h"
 
 
-void RoveSwitch::configInvert(bool invert) {
+void RoveSwitch::configInvert(const bool& invert) {
     m_inverted = invert;
 }
