@@ -5,6 +5,11 @@
 #include <Arduino.h>
 
 
+LimitSwitch::LimitSwitch(const uint8_t& pin) {
+	m_pin = pin;
+	pinMode(pin, INPUT);
+}
+
 bool LimitSwitch::read() {
 	return digitalRead(m_pin) != m_inverted;
 }

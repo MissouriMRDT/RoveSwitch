@@ -19,7 +19,7 @@ public:
 	 * 
 	 * @param pin The Arduino pin number to use.
 	 */
-	LimitSwitch(const uint8_t& pin) : m_pin(pin) {}
+	LimitSwitch(const uint8_t& pin);
 
     /**
      * @brief Read the current value of the switch via Arduino digitalRead().
