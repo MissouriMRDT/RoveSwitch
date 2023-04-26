@@ -22,7 +22,7 @@ public:
      * 
      * @return Whether the switch is tripped.
      */
-    virtual bool read() = 0;
+    virtual bool read() const = 0;
 
 };
 

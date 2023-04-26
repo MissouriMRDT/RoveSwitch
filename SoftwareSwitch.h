@@ -1,10 +1,10 @@
-#ifndef TESTSWITCH_H
-#define TESTSWITCH_H
+#ifndef SOFTWARESWITCH_H
+#define SOFTWARESWITCH_H
 
 #include "RoveSwitch.h"
 
 
-class TestSwitch : public RoveSwitch {
+class SoftwareSwitch : public RoveSwitch {
 
 private:
 
@@ -13,10 +13,10 @@ private:
 public:
 
 	/**
-	 * @brief Construct a new TestSwitch object.
+	 * @brief Construct a new SoftwareSwitch object.
 	 * 
 	 */
-	TestSwitch() {}
+	SoftwareSwitch() {}
 
 	/**
 	 * @brief Set the value returned when read, before invert is applied.
@@ -29,7 +29,7 @@ public:
      * 
      * @return Whether the switch is tripped.
      */
-	bool read();
+	bool read() const;
 
 };
 

@@ -10,7 +10,7 @@ LimitSwitch::LimitSwitch(const uint8_t& pin) {
 	pinMode(pin, INPUT);
 }
 
-bool LimitSwitch::read() {
+bool LimitSwitch::read() const {
 	return digitalRead(m_pin) != m_inverted;
 }
 

@@ -26,7 +26,7 @@ public:
      * 
      * @return Whether the switch is tripped.
      */
-	bool read();
+	bool read() const;
 	
 };
 
