@@ -5,9 +5,14 @@
 #include <Arduino.h>
 
 
-LimitSwitch::LimitSwitch(const uint8_t& pin) {
+LimitSwitch::LimitSwitch(const uint8_t& pin, bool pullup) {
 	m_pin = pin;
-	pinMode(pin, INPUT);
+	if (pullup) {
+		pinMode(pin, INPUT_PULLUP);
+	} else {
+		pinMode(pin, INPUT);
+	}
+	
 }
 
 bool LimitSwitch::read() const {

@@ -18,8 +18,9 @@ public:
 	 * @brief Construct a new LimitSwitch object.
 	 * 
 	 * @param pin The Arduino pin number to use.
+	 * @param pullup Configure Pullup Resistor internally 
 	 */
-	LimitSwitch(const uint8_t& pin);
+	LimitSwitch(const uint8_t& pin, bool pullup = false);
 
     /**
      * @brief Read the current value of the switch via Arduino digitalRead().
